@@ -1,10 +1,37 @@
 Package: DSpat
 Type: Package
 Title: Spatial modelling for distance sampling data
-Version: 0.1.1
-Date: 2011-05-10
+Version: 0.1.2
+Date: 2012-08-13
 Author: Devin Johnson, Jeff Laake, Jay VerHoef
 Maintainer: Jeff Laake <Jeff.Laake@noaa.gov>
-Description: Provides functions for fitting spatial models to line transect sampling data and to estimate abundance within a region.
-Depends: R (>= 2.0.0), spatstat (>= 1.22-0), RandomFields, gpclib, mgcv
-License: GPL version 2 or later
+Description: Provides functions for fitting spatial models
+    to line transect sampling data and to estimate
+    abundance within a region.
+Depends:
+    R (>= 2.0.0),
+    spatstat (>= 1.22-0),
+    RandomFields,
+    gpclib,
+    mgcv
+License: GPL (>= 2)
+Collate:
+    'create.covariate.images.R'
+    'create.lines.r'
+    'create.points.by.offset.R'
+    'dist2line.R'
+    'dspat.R'
+    'integrate.intensity.R'
+    'internal.R'
+    'lgcp.correction.R'
+    'lines.to.strips.R'
+    'LTDataFrame.R'
+    'offset.points.R'
+    'project2line.R'
+    'quadscheme.lt.R'
+    'sample.points.R'
+    'simCovariates.r'
+    'simDSpat.r'
+    'simPts.r'
+    'transect.intensity.r'
+    'zzz.R'

@@ -33,7 +33,7 @@
       }
       else
       {
-         if(spacing >= width)
+         if(spacing <= width)
             stop("\n spacing must exceed the transect width")
       }
    }

@@ -1,0 +1,11 @@
+DSpat 0.1.2 (13 Aug 2012)
+--------------------------
+	
+FEATURES
+
+* Added NAMESPACE and this NEWS file.		
+		
+BUG FIXES
+
+* Fixed bug in create.lines which had a incorrect test between spacing and transect width. Thanks to Darryl McKenzie for finding the error.
+
