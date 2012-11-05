@@ -7,15 +7,8 @@ print.DSpat.version <- function()
 	packageStartupMessage(hello)
 }
 
-.First.lib<-function(library,pkgname)
+.onAttach <- function(...)  
 {
 	print.DSpat.version()
 }
-
-
-.onAttach <- function(...) {
-	print.DSpat.version()
-}
-
-
 

@@ -15,7 +15,6 @@ simCovariates = function(hab.range=30, probs=c(1/3,2/3) , river.loc=50)
 # 10 April 2008
 ################################################################################
 {
- require(RandomFields)
  coords = cbind(x=rep(seq(.5,99.5,1),each=100), y=rep(seq(.5,99.5,1), 100))
  habRaw = GaussRF(coords, model="gauss", grid=FALSE, param=c(0,1,0,hab.range/sqrt(-log(0.05))))
  quan = c(-Inf,quantile(habRaw, probs),Inf)
