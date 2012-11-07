@@ -31,6 +31,7 @@ transects.
 Melville, G. J., and A. H. Welsh. 2001. Line transect sampling in small regions. Biometrics 57:1130-1137.
 }
 \examples{
+\donttest{
 ###############################################################################
 # Dubbo weed data
 ###############################################################################
@@ -380,6 +381,7 @@ dev.off()
 chisq=sum((exp.nosheep-obs.nosheep)^2/exp.nosheep)+
 sum((exp.sheep-obs.sheep)^2/exp.sheep)
 cat("Chi-square=",chisq," p= ",1-pchisq(chisq,2*15-10),"\n")
+}
 }
 }
 \keyword{datasets}

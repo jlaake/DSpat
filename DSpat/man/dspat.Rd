@@ -93,6 +93,7 @@ plot(mu.B$lambda, col=gray(1-c(1:100)/120), main='Estimated Intensity')
 plot(sim.dspat$model$Q$data,add=TRUE)
 plot(owin(poly=sim.dspat$transect),add=TRUE)
 plot(sim.dspat$lines.psp,lty=2,add=TRUE)
+\donttest{
 # Compute se and confidence interval for abundance without over-dispersion
 mu.B <- integrate.intensity(sim.dspat,se=TRUE,dimyx=100)
 cat("Standard Error =  ", round(mu.B$precision$se,0), "\n",
@@ -142,6 +143,7 @@ plot(mu.B$lambda, col=gray(1-c(1:100)/120), main='Estimated Intensity')
 plot(sim.dspat$model$Q$data,add=TRUE)
 plot(owin(poly=sim.dspat$transect),add=TRUE)
 plot(sim.dspat$lines.psp,lty=2,add=TRUE)
+}
 }
 }
 

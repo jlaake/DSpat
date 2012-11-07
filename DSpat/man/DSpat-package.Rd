@@ -275,6 +275,7 @@ Advanced Distance Sampling. Oxford University Press.
 \keyword{ package }
 \seealso{ \code{\link[spatstat:spatstat-package]{spatstat}} }
 \examples{
+\donttest{
 # get example data
 data(DSpat.lines)
 data(DSpat.obs)
@@ -308,5 +309,6 @@ mu.B <- integrate.intensity(sim.dspat,se=TRUE,dimyx=100)
 cat("Standard Error =  ", round(mu.B$precision$se,0), "\n",
     "95 Percent Conf. Int. =   (", round(mu.B$precision$lcl.95,0), ',',
            round(mu.B$precision$ucl.95,0), ")", "\n")
+}
 }
 

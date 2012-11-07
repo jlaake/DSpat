@@ -53,6 +53,7 @@ simDSpat(study.area=owin(xrange=c(0,100),yrange=c(0,100)),covariates,
 \author{Jeff Laake}
 \seealso{ \code{\link{simCovariates}},\code{\link{simPts}}}
 \examples{
+\donttest{
 # Code stored in a function to speed up package checking run by typing do.simDSpat
 # Some portions of this code will not pass the packge check on Linux and Mac and will issue
 # an error that the polygons intersect even though when run as an example, the
@@ -179,6 +180,7 @@ plot(owin(poly=sim.dspat$transect),add=TRUE)
 plot(sim.dspat$model$Q$data,add=TRUE)
 dev.off()
 spatstat.options(checkpolygons=TRUE)
+}
 }
 }
 

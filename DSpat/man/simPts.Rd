@@ -34,10 +34,12 @@ simPts(covariates,int.formula=~1, int.par=c(1), EN=100,
 \author{ Devin Johnson; Jeff Laake}
 \seealso{ \code{\link{simCovariates}}}
 \examples{
+\donttest{
 hab.range=30
 probs=c(1/3,2/3)
 covariates = simCovariates(hab.range, probs)
 xpp=simPts(covariates=covariates,int.formula=~factor(habitat),int.par=c(0,1,2))
 plot(xpp)
+}
 }
 
