@@ -63,7 +63,7 @@ lines_to_strips = function(lines, study.area, width=NULL)
    {
       gpc.area=owin.gpc.poly(study.area)
       b=as(data.frame(x=x,y=y),"gpc.poly")
-      inside.poly=get.pts(gpclib:::intersect(b,gpc.area))[[1]]
+      inside.poly=get.pts(intersect(b,gpc.area))[[1]]
       xdf= data.frame(x=rev(inside.poly$x),y=rev(inside.poly$y))
       return(list(poly=xdf[!duplicated(xdf),],angle=theta))
    }

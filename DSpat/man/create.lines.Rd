@@ -24,6 +24,7 @@ create.lines(study.area,nlines=NULL,width,spacing=NULL,angle=0)
 \author{Jeff Laake}
 \seealso{ \code{\link{simCovariates}},\code{\link{simPts}}}
 \examples{
+\donttest{
 study.area=owin(xrange=c(0,100),yrange=c(0,100))
 xp=create.lines(study.area,nlines=10,width=5,angle=180)
 ls=lines_to_strips(xp,study.area)
@@ -32,5 +33,6 @@ plot(ls$lines,lty=2)
 spatstat.options(checkpolygons=FALSE)
 plot(owin(poly=ls$transects),add=TRUE)
 spatstat.options(checkpolygons=TRUE)
+}
 }
 

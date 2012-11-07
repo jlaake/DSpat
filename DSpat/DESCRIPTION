@@ -1,8 +1,8 @@
 Package: DSpat
 Type: Package
 Title: Spatial modelling for distance sampling data
-Version: 0.1.4
-Date: 2012-11-06
+Version: 0.1.5
+Date: 2012-11-07
 Author: Devin Johnson, Jeff Laake, Jay VerHoef
 Maintainer: Jeff Laake <Jeff.Laake@noaa.gov>
 Description: Provides functions for fitting spatial models
@@ -12,8 +12,9 @@ Depends:
     R (>= 2.0.0),
     spatstat (>= 1.22-0),
     RandomFields,
-    gpclib,
     mgcv
+Imports: 
+    rgeos
 License: GPL (>= 2)
 Collate:
     'create.covariate.images.R'

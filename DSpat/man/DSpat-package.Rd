@@ -272,7 +272,6 @@ Buckland, S.T., D.R.Anderson, K.P. Burnham, J.L. Laake, D.L. Borchers, and L. Th
 Advanced Distance Sampling. Oxford University Press.
 
 }
-\keyword{ package }
 \seealso{ \code{\link[spatstat:spatstat-package]{spatstat}} }
 \examples{
 \donttest{

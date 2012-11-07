@@ -65,6 +65,7 @@ so that the grid points are evenly distributed in the direction of perpendicular
 \author{Jeff Laake; Devin Johnson }
 \seealso{ \code{\link{quadscheme.lt}},\code{\link{LTDataFrame}}}
 \examples{
+
 # get example data
 data(DSpat.lines)
 data(DSpat.obs)
@@ -73,7 +74,8 @@ data(DSpat.covariates)
 sim.dspat=dspat(~ river + factor(habitat),
                 study.area=owin(xrange=c(0,100), yrange=c(0,100)),
                 obs=DSpat.obs,lines=DSpat.lines,covariates=DSpat.covariates,
-                epsvu=c(1,.01),width=0.4)
+                epsvu=c(4,.1),width=0.4)
+\donttest{
 # Print
 sim.dspat
 # Summarize results
@@ -93,7 +95,7 @@ plot(mu.B$lambda, col=gray(1-c(1:100)/120), main='Estimated Intensity')
 plot(sim.dspat$model$Q$data,add=TRUE)
 plot(owin(poly=sim.dspat$transect),add=TRUE)
 plot(sim.dspat$lines.psp,lty=2,add=TRUE)
-\donttest{
+
 # Compute se and confidence interval for abundance without over-dispersion
 mu.B <- integrate.intensity(sim.dspat,se=TRUE,dimyx=100)
 cat("Standard Error =  ", round(mu.B$precision$se,0), "\n",
