@@ -1,5 +1,5 @@
 simPts=function(covariates,int.formula=~1, int.par=c(1), EN=100,
-                model="exp", cor.par=NULL, showplot=FALSE, showpts=FALSE, ...)
+                model=NULL, showplot=FALSE, showpts=FALSE, ...)
 ################################################################################
 #
 # Simulates point process (homogeneous Poisson, inhomogeneous Poisson and
@@ -20,7 +20,7 @@ simPts=function(covariates,int.formula=~1, int.par=c(1), EN=100,
 #
 #   EN           - expecte number of points
 #
-#   model        - either exp (exponential) or gauss (gaussian)
+#   model        - a model for RFsimulate()
 #
 #   cor.par      - parameters controlling clustering of points
 #                    cor.par[1] sigma^2 cor.par[2]=alpha
@@ -51,10 +51,10 @@ simPts=function(covariates,int.formula=~1, int.par=c(1), EN=100,
   lamIm = im(exp(mu)*I.x,xcol=unique(x),yrow=unique(y))
 # Add clustering to the intensity surface using the specified exp or gauss model
 # and the sigma^2 and alpha parameters.Skip this if cor.par has not been assigned.
-  if(!is.null(cor.par))
+  if(!is.null(model))
   {
-     if(!model %in% c("exp","gauss"))stop("\n model must be either exp or gauss")
-     z=GaussRF(x=cbind(x,y),model=model,grid=FALSE,param=c(0,cor.par[1],0,cor.par[2]))
+     #if(!model %in% c("exp","gauss"))stop("\n model must be either exp or gauss")
+     z=RFsimulate(model=model, x=x, y=y, grid=FALSE)@data[,1]
      Zim = im(exp(z),xcol=unique(x),yrow=unique(y))
      lamIm = eval.im(lamIm*Zim)
   }

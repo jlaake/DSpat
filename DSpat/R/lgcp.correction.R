@@ -88,7 +88,8 @@ function(fit.ppm, fit.lgcp, reps=100, J.inv, silent=FALSE,
   for(i in 1:reps)
   {
 #   Generate a random field for the original coordinate system
-    z = GaussRF(x=cbind(grid.pts$x,grid.pts$y), model="exp", grid=FALSE, param=c(0,sigma2,0,alpha))
+    #z = GaussRF(x=cbind(grid.pts$x,grid.pts$y), model="exp", grid=FALSE, param=c(0,sigma2,0,alpha))
+    z = RFsimulate(model=RMexp(var=sigma2, scale=alpha), x=grid.pts$x, y=grid.pts$y, grid=FALSE)@data[,1]
 #   For each line, generate a random set of points using the lambdaLst and correlated field
     XLst =  lapply(c(1:ntran),new.pts,lambdaLst=lambdaLst,z=z,labels=labels,dummy.labels=dummy.labels)
 #   For the generated set of points, snap them to the mask to get the covariate values

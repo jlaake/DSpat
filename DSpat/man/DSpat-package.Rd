@@ -241,7 +241,7 @@ returns a dataframe of \code{lines} and \code{observations} that can be used wit
 datframe in \code{\link{dspat}} for an analysis.
 
 \code{\link{simPts}} - creates a simulated point process in a study area by calling
-\code{GaussRF} from the package \code{RandomFields} and \code{rpoispp} from
+\code{RFsimulate} from the package \code{RandomFields} and \code{rpoispp} from
 \code{spatstat}.  The intensity process is defined by a \code{covariates} dataframe and a formula
 and parameters for the intensity as a function of the covariates.
      
