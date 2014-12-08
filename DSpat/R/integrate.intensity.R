@@ -88,7 +88,7 @@ log.normal.ci=function(est,se)
 # compute intensity over grid (lambda)
 #
   x$model$Q$data$marks <- x$model$Q$dummy$marks <- NULL
-  locs = as.ppp(expand.grid(x=B.mask$xcol,y=B.mask$yrow)[,2:1],W=bounding.box(B.mask))
+  locs = as.ppp(expand.grid(x=B.mask$xcol,y=B.mask$yrow)[,2:1],W=boundingbox(B.mask))
   locs=locs[B.mask]
   lambda <- predict(x$model,locations=locs,covariates=covariates,type="lambda")
 # create dataframe of covariate values for grid

@@ -23,7 +23,6 @@ a scaled distance from 0 to 1.
 \author{ Devin Johnson; Jeff Laake}
 \seealso{ \code{\link{simPts}}}
 \examples{
-\donttest{
 covariates = simCovariates(hab.range=50, probs=c(1/3,2/3,7/8))
-}}
+}
 

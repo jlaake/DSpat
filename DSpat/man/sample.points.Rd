@@ -38,7 +38,6 @@ Definition for half-normal detection function (hndetfct) is \code{exp(-(x^2/(2*e
 \author{Jeff Laake}
 \seealso{ \code{\link{simCovariates}},\code{\link{simPts}},\code{\link{create.lines}}}
 \examples{
-\donttest{
 study.area=owin(xrange=c(0,100),yrange=c(0,100))
 hab.range=30
 probs=c(1/3,2/3)
@@ -51,6 +50,5 @@ xpp=simPts(covariates=covariates,int.formula=~factor(habitat),int.par=c(0,1,2),E
 obs=sample.points(transects=ls$transects,lines=xlines,points.ppp=xpp,
                     hndetfct,c(1),covariates=covariates)
 plot(ppp(x=obs$x,y=obs$y,window=study.area),add=TRUE,pch=20)
-}
 }
 
