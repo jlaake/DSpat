@@ -1,8 +1,8 @@
 Package: DSpat
 Type: Package
 Title: Spatial Modelling for Distance Sampling Data
-Version: 0.1.5
-Date: 2012-11-07
+Version: 0.1.6
+Date: 2014-12-08
 Author: Devin Johnson, Jeff Laake, Jay VerHoef
 Maintainer: Jeff Laake <Jeff.Laake@noaa.gov>
 Description: Fits inhomogeneous Poisson process spatial models
