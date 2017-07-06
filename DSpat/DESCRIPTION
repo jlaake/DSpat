@@ -4,7 +4,7 @@ Title: Spatial Modelling for Distance Sampling Data
 Version: 0.1.6
 Date: 2014-12-08
 Author: Devin Johnson, Jeff Laake, Jay VerHoef
-Maintainer: Jeff Laake <Jeff.Laake@noaa.gov>
+Maintainer: Jeff Laake <jefflaake@gmail.com>
 Description: Fits inhomogeneous Poisson process spatial models
     to line transect sampling data and provides estimate of
     abundance within a region.
